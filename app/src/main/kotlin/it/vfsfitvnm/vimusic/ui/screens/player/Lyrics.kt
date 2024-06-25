@@ -219,7 +219,7 @@ fun Lyrics(
             ) {
                 BasicText(
                     text = "An error has occurred while fetching the ${if (isShowingSynchronizedLyrics) "synchronized " else ""}lyrics",
-                    style = typography.xs.center.medium.color(PureBlackColorPalette.text),
+                    style = typography.m.center.medium.color(PureBlackColorPalette.text),
                     modifier = Modifier
                         .background(Color.Black.copy(0.4f))
                         .padding(all = 8.dp)
@@ -236,7 +236,7 @@ fun Lyrics(
             ) {
                 BasicText(
                     text = "${if (isShowingSynchronizedLyrics) "Synchronized l" else "L"}yrics are not available for this song",
-                    style = typography.xs.center.medium.color(PureBlackColorPalette.text),
+                    style = typography.m.center.medium.color(PureBlackColorPalette.text),
                     modifier = Modifier
                         .background(Color.Black.copy(0.4f))
                         .padding(all = 8.dp)
@@ -285,7 +285,7 @@ fun Lyrics(
                         itemsIndexed(items = synchronizedLyrics.sentences) { index, sentence ->
                             BasicText(
                                 text = sentence.second,
-                                style = typography.xs.center.medium.color(if (index == synchronizedLyrics.index) PureBlackColorPalette.text else PureBlackColorPalette.textDisabled),
+                                style = typography.m.center.medium.color(if (index == synchronizedLyrics.index) PureBlackColorPalette.text else PureBlackColorPalette.textDisabled),
                                 modifier = Modifier
                                     .padding(vertical = 4.dp, horizontal = 32.dp)
                             )
@@ -294,7 +294,7 @@ fun Lyrics(
                 } else {
                     BasicText(
                         text = text,
-                        style = typography.xs.center.medium.color(PureBlackColorPalette.text),
+                        style = typography.m.center.medium.color(PureBlackColorPalette.text),
                         modifier = Modifier
                             .verticalFadingEdge()
                             .verticalScroll(rememberScrollState())
